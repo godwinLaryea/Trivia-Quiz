@@ -42,7 +42,6 @@ const fetchQuiz = async() => {
         
         questionElement.textContent = questions
       });
-      
       nextButton.style.display = "none"
 
   }    
@@ -61,13 +60,13 @@ const fetchQuiz = async() => {
   
   trueButton.addEventListener('click', ()=>{
     correctAnswer(trueButton.value)
-    displayElement.textContent = "You are awesome!";
+    displayElement.textContent = "You are awesome! 👏🏽";
     nextButton.style.display = "flex"
   })
   
   falseButton.addEventListener('click', ()=>{
     correctAnswer(falseButton.value)
-    displayElement.textContent = "You will get the next one. Keep going"
+    displayElement.textContent = "You will get the next one. Keep going 💪🏽"
     nextButton.style.display = "flex"
   })
 
