@@ -25,6 +25,12 @@ let score = {
   losses: 0
 }
 
+function decodeEntities(text) {
+  const textArea = document.createElement("textarea");
+  textArea.innerHTML = text;
+  return textArea.value;
+}
+
 const fetchQuiz = async() => {
   try {
     const response = await fetch("https://opentdb.com/api.php?amount=30&category=9&difficulty=easy&type=boolean");
@@ -32,9 +38,10 @@ const fetchQuiz = async() => {
     
     questions = quiz.results.map((question)=>{
       return {
-        question: question.question,
+        ...question,
+        question: decodeEntities(question.question),
         correct_answer: question.correct_answer,
-        incorrect_answers: question.incorrect_answers
+        incorrect_answers: question.incorrect_answers,
       }
     })
   
