@@ -86,7 +86,7 @@ const fetchQuiz = async() => {
       scoreUpdate.innerHTML = `<p>Wins: ${score.wins}</p>
       <p>Losses: ${score.losses}</p>
       `
-    }else if(selectedAnswer !== correctAnswer){
+    }else{
       score.losses +=1
       scoreUpdate.innerHTML = `<p>Wins: ${score.wins}</p>
       <p>Losses: ${score.losses}</p>`
