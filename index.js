@@ -68,6 +68,7 @@ const fetchQuiz = async() => {
       trueButton.style.display = "none";
       falseButton.style.display = "none";
       nextButton.style.display = "none";
+      displayElement.style.display = "none";
     }
   };
   
